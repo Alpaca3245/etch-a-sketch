@@ -8,28 +8,25 @@ body {
     align-items: center;
 }
 
-#etch-a-sketch-container {
-
+.grid {
+    display:flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
 }
-
-
 
 .gridRow {
     display:flex;
-    align-items: stretch;
+    flex: 1;
     justify-content: stretch;
 }
 
 .gridSquare {
-    display: flex;
     color: aqua;
     background-color: aqua;
     min-width: 20px;
     min-height: 20px;
-    max-height: 50px;
-    max-width: 50px;
-    align-items: stretch;
-    justify-content: stretch;
+    flex-grow: 1;
 
     transition: background-color 2s ease-in-out;
 }
