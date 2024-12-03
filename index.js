@@ -32,6 +32,19 @@ function createGridElem() {
 function createGrid() {
     const etchASketchContainer = document.getElementById("etch-a-sketch-container");
     etchASketchContainer.appendChild(createGridElem());
+
+
+}
+
+function enableHoverEffect(enableEffect = true) {
+
+    if (enableEffect) {
+        const gridSquares = document.querySelectorAll(".gridSquare");
+        
+        gridSquares.forEach((square) => {
+                
+        })
+    }
 }
 
 createGrid();

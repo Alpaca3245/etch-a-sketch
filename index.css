@@ -1,5 +1,5 @@
 body {
-    overflow: hidden;
+    overflow: auto;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -9,19 +9,32 @@ body {
 }
 
 #etch-a-sketch-container {
-    display: flex;
-    justify-content: center;
+
 }
+
+
 
 .gridRow {
     display:flex;
+    align-items: stretch;
+    justify-content: stretch;
 }
 
 .gridSquare {
+    display: flex;
     color: aqua;
     background-color: aqua;
-    width:20px;
-    height: 20px;
-    border-style: solid;
-    border-color: black;
+    min-width: 20px;
+    min-height: 20px;
+    max-height: 50px;
+    max-width: 50px;
+    align-items: stretch;
+    justify-content: stretch;
+
+    transition: background-color 2s ease-in-out;
+}
+
+.gridSquare:hover {
+    background-color: azure;
+    transition-duration: 0s;
 }
