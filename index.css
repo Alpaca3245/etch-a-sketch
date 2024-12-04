@@ -1,11 +1,25 @@
 body {
-    overflow: auto;
+    overflow:hidden;
     position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center; 
     align-items: center;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    justify-content: center;
+}
+
+
+#etch-a-sketch-container {
+    border-style: solid;
+    border-color: black;
 }
 
 .grid {
@@ -17,18 +31,21 @@ body {
 
 .gridRow {
     display:flex;
-    flex: 1;
+    flex: 1 0 auto;
     justify-content: stretch;
 }
 
 .gridSquare {
     color: aqua;
-    background-color: aqua;
-    min-width: 20px;
-    min-height: 20px;
+    min-width: 5px;
+    min-height: 5px;
     flex-grow: 1;
 
     transition: background-color 2s ease-in-out;
+}
+
+.gridSquare, #etch-a-sketch-container {
+    background-color: aqua;
 }
 
 .gridSquare:hover {
