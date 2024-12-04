@@ -43,6 +43,7 @@ function promptUserForGridSize() {
 
     if ((rowSize >= MIN && rowSize <= MAX) && (squarePerRow >= MIN && squarePerRow <= MAX)) {
         changeGridSize(rowSize, squarePerRow);
+        window.confirm("Changed grid size!")
     } else {
         window.alert("Value must be from " + MIN + " to " + MAX +"!");
     }
@@ -59,5 +60,9 @@ function deleteGrid() {
     document.querySelector(".grid").remove();
 }
 
+// Added listener for #gridSizeBtn to call promptUserForGridSize function on click
+document.getElementById("gridSizeBtn").addEventListener("click", promptUserForGridSize);
+
+
 createGrid();
-promptUserForGridSize();
+
